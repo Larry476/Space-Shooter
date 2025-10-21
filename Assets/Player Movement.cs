@@ -17,6 +17,7 @@ public class testing : MonoBehaviour
     void Start()
     {
         print(speed);
+        speed = 8.5f;
     }
 
     // Update is called once per frame
