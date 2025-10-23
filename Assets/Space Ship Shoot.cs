@@ -20,21 +20,19 @@ public class SpaceShipShoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             
-            shoot1();
+            shoot();
         }
-        if (Input.GetKey(KeyCode.Q)) 
+        if (Input.GetKeyDown(KeyCode.Q)) 
         {
-            shoot2();
+            
         }
 
     }
-    void shoot1()
+    void shoot()
     {
         Instantiate(bulletprefab, Firepoint.position, Firepoint.rotation);
-    }
-    void shoot2()
-    {
         Instantiate(bulletprefab2, Firepoint2.position, Firepoint2.rotation);
     }
+ 
 
 }

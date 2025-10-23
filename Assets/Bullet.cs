@@ -13,25 +13,35 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.linearVelocity = transform.up * speed;
-   
+    }
+    void Update()
+    {
+        
+        
+        
+    }
+
+
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
     EnemySmall EnemySmall = hitInfo.GetComponent<EnemySmall>();
-        if (EnemySmall != null)
+        if(EnemySmall != null )
         {
             EnemySmall.TakeDamage(damage);
-            
+            StartCoroutine(Deletee());
         }
         else
         {
+            
             StartCoroutine(Deletee());
          }
     }
 
     private IEnumerator Deletee()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
+
 
 }

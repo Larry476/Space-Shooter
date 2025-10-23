@@ -1,39 +1,32 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemySmall : MonoBehaviour
 {
     public int health = 25;
-    public Rigidbody2D rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    
         void Start()
     {
-        
+        print(health);
     }
        // Update is called once per frame
 
     void Update()
-    {
-        
+    { 
     }
-    public void TakeDamage(int damage)
+     public void TakeDamage(int damage)
     {
+        print(health);
         health -= damage;
-        if (health < 0)
+        if (health <= 0)
         {
-            Die();
-        }
-        void Die()
-        {
-            StartCoroutine(Death());
+            print(health);
             Destroy(gameObject);
         }
-        IEnumerator Death()
-        {
-            yield return new WaitForSeconds(0.5f);
-            Destroy(gameObject);
-        }
+
     }
 }
