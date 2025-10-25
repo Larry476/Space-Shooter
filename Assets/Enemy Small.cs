@@ -6,6 +6,7 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class EnemySmall : MonoBehaviour
 {
     public int health = 25;
+    public GameObject Player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    
@@ -16,7 +17,14 @@ public class EnemySmall : MonoBehaviour
        // Update is called once per frame
 
     void Update()
-    { 
+    {
+        transform.position = new Vector3 (0, 0);
+        if(health < 35)
+        {
+            
+        }
+
+
     }
      public void TakeDamage(int damage)
     {
