@@ -8,6 +8,8 @@ public class SpaceShipShoot : MonoBehaviour
     public Transform Firepoint2;
     public GameObject bulletprefab;
     public GameObject bulletprefab2;
+    public int shootDelay = 3;
+    private float timer = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,8 +21,9 @@ public class SpaceShipShoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            
+            timer += Time.deltaTime;
             shoot();
+            timer = 0;
         }
         if (Input.GetKeyDown(KeyCode.Q)) 
         {

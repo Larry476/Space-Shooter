@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -8,10 +9,16 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public float Respawndelay = 5f;
+    [Header("Enemy Spawner")]
+    
     public Transform SpawnPoint;
     public GameObject EnemySmallprefab;
     public GameObject Player;
+    public int maxenemies = 5;
+
+    private float timer = 0f;
+    private float respawninterval = 2f;
+    private int minenemies = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,17 +28,18 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(EnemySmallprefab != null) 
+        timer += Time.deltaTime;
+
+        if(timer >= respawninterval && minenemies < maxenemies) 
         {
             spawnenemy();
-            
+            timer = 0;
         }
+      
         void spawnenemy()
         {
-            
             Instantiate(EnemySmallprefab, SpawnPoint.position, SpawnPoint.rotation);
-
+            minenemies++;
         }
         
 
