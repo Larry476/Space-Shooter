@@ -13,6 +13,7 @@ public class testing : MonoBehaviour
     [SerializeField] KeyCode right = KeyCode.D;
     [SerializeField] KeyCode up = KeyCode.W;
     [SerializeField]KeyCode down = KeyCode.S;
+    private GameObject Player; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,6 +40,13 @@ public class testing : MonoBehaviour
         {
             transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
             // The basic player movement. 
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+
+            
+
+
         }
 
         Vector3 clampedPos = transform.position;

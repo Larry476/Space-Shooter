@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("Enemy Spawner")]
     
-    public Transform SpawnPoint;
+    public Transform SpawnPoints;
     public GameObject EnemySmallprefab;
     public GameObject Player;
     public int maxenemies = 5;
@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
       
         void spawnenemy()
         {
-            Instantiate(EnemySmallprefab, SpawnPoint.position, SpawnPoint.rotation);
+            Instantiate(EnemySmallprefab, SpawnPoints.position, SpawnPoints.rotation);
             minenemies++;
         }
         

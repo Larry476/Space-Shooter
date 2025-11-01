@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 209575493}
   - component: {fileID: 209575494}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf5758218ead854a829d1525984151c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 209575493}
+  SpawnPoints: {fileID: 209575493}
   EnemySmallprefab: {fileID: 6674568924486008306, guid: 03c7f8acbbbc4264fa52da58ed0ef799, type: 3}
   Player: {fileID: 0}
   maxenemies: 10
@@ -951,6 +951,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &522870969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522870971}
+  - component: {fileID: 522870970}
+  m_Layer: 0
+  m_Name: SpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &522870970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522870969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf5758218ead854a829d1525984151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoints: {fileID: 522870971}
+  EnemySmallprefab: {fileID: 6674568924486008306, guid: 03c7f8acbbbc4264fa52da58ed0ef799, type: 3}
+  Player: {fileID: 0}
+  maxenemies: 10
+--- !u!4 &522870971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522870969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12, y: 10.41, z: 0.018161224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1249,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &975783721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975783723}
+  - component: {fileID: 975783722}
+  m_Layer: 0
+  m_Name: SpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &975783722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975783721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf5758218ead854a829d1525984151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoints: {fileID: 975783723}
+  EnemySmallprefab: {fileID: 6674568924486008306, guid: 03c7f8acbbbc4264fa52da58ed0ef799, type: 3}
+  Player: {fileID: 0}
+  maxenemies: 10
+--- !u!4 &975783723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975783721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9999998, y: 10.41, z: 0.018161224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041046451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1384,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1115293925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115293927}
+  - component: {fileID: 1115293926}
+  m_Layer: 0
+  m_Name: SpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1115293926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115293925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf5758218ead854a829d1525984151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoints: {fileID: 1115293927}
+  EnemySmallprefab: {fileID: 6674568924486008306, guid: 03c7f8acbbbc4264fa52da58ed0ef799, type: 3}
+  Player: {fileID: 0}
+  maxenemies: 10
+--- !u!4 &1115293927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115293925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16, y: 10.41, z: 0.018161224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1258981443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,7 +1861,7 @@ MonoBehaviour:
   Firepoint2: {fileID: 1442775713}
   bulletprefab: {fileID: 8790141050631723448, guid: 12b79f22749403c4ab3ea5c0a7230bc5, type: 3}
   bulletprefab2: {fileID: 4314048480012949497, guid: 7c07ce25151a75a4193987b3d4816de1, type: 3}
-  shootDelay: 3
+  shootDelay: 1.5
 --- !u!1 &1741592543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,10 +2045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a5a47af2de2d548b7780d0e80cbbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorevalue: 15
-  health: 100
+  scorevalue: 5
+  health: 15
   Player: {fileID: 1591468430}
-  enemySpeed: 1
+  enemySpeed: 3.5
 --- !u!50 &2020777038
 Rigidbody2D:
   serializedVersion: 5
@@ -2014,6 +2158,9 @@ SceneRoots:
   - {fileID: 2020777040}
   - {fileID: 411816891}
   - {fileID: 209575493}
+  - {fileID: 975783723}
+  - {fileID: 522870971}
+  - {fileID: 1115293927}
   - {fileID: 1741592548}
   - {fileID: 971541086}
   - {fileID: 1258981447}
