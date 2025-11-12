@@ -8,8 +8,14 @@ public class SpaceShipShoot : MonoBehaviour
     public Transform Firepoint2;
     public GameObject bulletprefab;
     public GameObject bulletprefab2;
+    public GameObject ExplosiveBulletprefab;
+    // Bullet Prefabs finding - Oliver
     public float shootDelay = 0.5f;
     private float timer = 0.7f;
+    public float explosiveDelay = 5f;
+    private float explosiveTimer = 3f;
+    
+    // The shooting delay for each bullet type - Oliver
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,11 +26,19 @@ public class SpaceShipShoot : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        explosiveTimer += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.E) && timer >= shootDelay)
+        if (Input.GetKey(KeyCode.E) && timer >= shootDelay)
         {
             shoot();
             timer = 1f;
+        
+        }
+        if(Input.GetKey(KeyCode.Q) && explosiveTimer >= explosiveDelay )
+        {
+            ExplosiveShoot();
+            explosiveTimer = 3f;
+            
         }
 
     }
@@ -32,6 +46,10 @@ public class SpaceShipShoot : MonoBehaviour
     {
         Instantiate(bulletprefab, Firepoint.position, Firepoint.rotation);
         Instantiate(bulletprefab2, Firepoint2.position, Firepoint2.rotation);
+    }
+    void ExplosiveShoot()
+    {
+        Instantiate(ExplosiveBulletprefab, Firepoint.position, Firepoint.rotation);
     }
  
 

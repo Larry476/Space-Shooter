@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
         {
             spawnenemy();
             timer = 0;
+            respawninterval = 5;
         }
       
         void spawnenemy()

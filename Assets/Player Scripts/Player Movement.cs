@@ -17,8 +17,7 @@ public class testing : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        print(speed);
-        speed = 8.5f;
+             
     }
 
     // Update is called once per frame
@@ -41,13 +40,7 @@ public class testing : MonoBehaviour
             transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
             // The basic player movement. 
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-
-            
-
-
-        }
+     
 
         Vector3 clampedPos = transform.position;
         clampedPos.x = Mathf.Clamp(clampedPos.x, minX, maxX);
