@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class testing : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
+
     [Header("Boundary Limits")]
     [SerializeField] float minX = -17.4f;
     [SerializeField] float maxX = 17.4f;
@@ -12,12 +13,13 @@ public class testing : MonoBehaviour
     [SerializeField] KeyCode left = KeyCode.A;
     [SerializeField] KeyCode right = KeyCode.D;
     [SerializeField] KeyCode up = KeyCode.W;
-    [SerializeField]KeyCode down = KeyCode.S;
-    private GameObject Player; 
+    [SerializeField] KeyCode down = KeyCode.S;
+    public GameObject Player;
+    public int PlayerHealth = 15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-             
+
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class testing : MonoBehaviour
             transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
             // The basic player movement. 
         }
-     
+
 
         Vector3 clampedPos = transform.position;
         clampedPos.x = Mathf.Clamp(clampedPos.x, minX, maxX);
@@ -48,4 +50,13 @@ public class testing : MonoBehaviour
         transform.position = clampedPos;
         // Stops the player from going out of bounds. 
     }
+    public void PlayerDamage(int explosiveDamage)
+    {
+        PlayerHealth -= explosiveDamage;
+        if (PlayerHealth < 0)
+        {
+            print(PlayerHealth);
+        }
+    }
+
 }

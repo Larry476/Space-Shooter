@@ -12,8 +12,8 @@ public class SpaceShipShoot : MonoBehaviour
     // Bullet Prefabs finding - Oliver
     public float shootDelay = 0.5f;
     private float timer = 0.7f;
-    public float explosiveDelay = 5f;
-    private float explosiveTimer = 3f;
+    public float explosiveDelay = 0f;
+    private float explosiveTimer = 0f;
     
     // The shooting delay for each bullet type - Oliver
     // Start is called once before the first execution of Update after the MonoBehaviour is created

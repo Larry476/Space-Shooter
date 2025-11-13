@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class ExplosiveBullet : MonoBehaviour
@@ -37,6 +38,20 @@ public class ExplosiveBullet : MonoBehaviour
                 StartCoroutine(RemoveBullet());
                 StartCoroutine(Explode());
             }
+            if (ExplosiveHit.CompareTag("Player"))
+            {
+                PlayerManager playerManager = ExplosiveHit.GetComponent<PlayerManager>();
+                if (playerManager != null)
+                {
+                    playerManager.PlayerDamage(ExposiveDamage);
+                    StartCoroutine (Explode());
+                }
+                else
+                {
+                    StartCoroutine(RemoveBullet());
+                }
+            }
+
         }
     }
 

@@ -1488,10 +1488,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1591468434}
   - component: {fileID: 1591468433}
-  - component: {fileID: 1591468435}
   - component: {fileID: 1591468438}
   - component: {fileID: 1591468437}
   - component: {fileID: 1591468436}
+  - component: {fileID: 1591468439}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1575,27 +1575,6 @@ Transform:
   - {fileID: 1283731016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1591468435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591468430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2afa67d8f3fda8246bc75a8e89c59770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: -17.4
-  maxX: 17.4
-  minY: -9.5
-  maxY: 9.5
-  speed: 10
-  left: 97
-  right: 100
-  up: 119
-  down: 115
 --- !u!50 &1591468436
 Rigidbody2D:
   serializedVersion: 5
@@ -1687,7 +1666,30 @@ MonoBehaviour:
   bulletprefab2: {fileID: 4314048480012949497, guid: 7c07ce25151a75a4193987b3d4816de1, type: 3}
   ExplosiveBulletprefab: {fileID: 3325325194574121313, guid: 805d82cf6111505498f5d82776dffe90, type: 3}
   shootDelay: 1.5
-  explosiveDelay: 3
+  explosiveDelay: 5
+--- !u!114 &1591468439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591468430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3b7ef8166f3764d9b7845cd27f2fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: -17.4
+  maxX: 17.4
+  minY: -9.5
+  maxY: 9.5
+  speed: 8.5
+  left: 97
+  right: 100
+  up: 119
+  down: 115
+  Player: {fileID: 1591468430}
+  PlayerHealth: 15
 --- !u!1 &1741592543
 GameObject:
   m_ObjectHideFlags: 0
