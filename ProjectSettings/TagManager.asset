@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Enemy Small
   - Explosion
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX

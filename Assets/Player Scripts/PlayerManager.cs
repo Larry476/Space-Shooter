@@ -15,7 +15,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] KeyCode up = KeyCode.W;
     [SerializeField] KeyCode down = KeyCode.S;
     public GameObject Player;
-    public int PlayerHealth = 15;
+    public int PlayerHealth = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,7 +40,7 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKey(down))
         {
             transform.position += new Vector3(0, -1, 0) * speed * Time.deltaTime;
-            // The basic player movement. 
+            // The basic player movement. Player can move Up, Down, Left and Right. 
         }
 
 
@@ -50,13 +50,24 @@ public class PlayerManager : MonoBehaviour
         transform.position = clampedPos;
         // Stops the player from going out of bounds. 
     }
+
+    public void EnemyBullet(int Playerdamage)
+    {
+        PlayerHealth -= Playerdamage;
+        if(PlayerHealth < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     public void PlayerDamage(int explosiveDamage)
     {
         PlayerHealth -= explosiveDamage;
         if (PlayerHealth < 0)
         {
             print(PlayerHealth);
+            Destroy(gameObject);
         }
+        // The player dies if they either get hit by a enemy bullet or an explosive if they have low enough HP.
     }
 
 }

@@ -14,9 +14,7 @@ public class SpaceShipShoot : MonoBehaviour
     private float timer = 0.7f;
     public float explosiveDelay = 0f;
     private float explosiveTimer = 0f;
-    
     // The shooting delay for each bullet type - Oliver
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
@@ -38,8 +36,8 @@ public class SpaceShipShoot : MonoBehaviour
         {
             ExplosiveShoot();
             explosiveTimer = 3f;
-            
         }
+        // Cooldowns when shooting either normal bullets or explosive bullets.
 
     }
     void shoot()
@@ -51,6 +49,7 @@ public class SpaceShipShoot : MonoBehaviour
     {
         Instantiate(ExplosiveBulletprefab, Firepoint.position, Firepoint.rotation);
     }
+    // Each respective bullet type.
  
 
 }

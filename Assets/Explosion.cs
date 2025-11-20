@@ -12,6 +12,7 @@ public class Explosion : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 0.25f);
+        // The hitbox for the explosion. 
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class Explosion : MonoBehaviour
             {
                 playerManager.PlayerDamage(explosiveDamage);
             }
+            // Checks if either the player or the enemy is in the explosion radius and deals damage respectively. 
         }
     }
 }

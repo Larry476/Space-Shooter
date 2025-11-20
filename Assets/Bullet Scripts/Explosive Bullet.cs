@@ -6,9 +6,10 @@ using UnityEngine;
 public class ExplosiveBullet : MonoBehaviour
 {
     public float speed = 10f;
-    public int ExposiveDamage = 30;
+    public int ExposiveHit = 30;
     public Rigidbody2D rb;
     public GameObject ExplosionPrefab;
+    
     
     void Start()
     {
@@ -30,8 +31,9 @@ public class ExplosiveBullet : MonoBehaviour
             if (EnemySmall != null)
             {
                 CompareTag("Explosion");
-                EnemySmall.ExplosionDamage(ExposiveDamage);
+                EnemySmall.ExplosionDamage(ExposiveHit);
                 StartCoroutine(Explode());
+                // Checks if the tag matches the enemy and explodes if it hits the enemy tag - O
             }
             else
             {
@@ -40,11 +42,14 @@ public class ExplosiveBullet : MonoBehaviour
             }
             if (ExplosiveHit.CompareTag("Player"))
             {
-                PlayerManager playerManager = ExplosiveHit.GetComponent<PlayerManager>();
-                if (playerManager != null)
+                CompareTag("Explosion");
+                PlayerManager PlayerManager = ExplosiveHit.GetComponent<PlayerManager>();
+                if (PlayerManager != null)
                 {
-                    playerManager.PlayerDamage(ExposiveDamage);
-                    StartCoroutine (Explode());
+                    Debug.Log("Self Damage");
+                    PlayerManager.PlayerDamage(ExposiveHit);
+                    StartCoroutine(Explode());
+                    // Checks if the explosive hits the player. 
                 }
                 else
                 {
@@ -64,7 +69,7 @@ public class ExplosiveBullet : MonoBehaviour
     private IEnumerator Explode()
     {
         Instantiate(ExplosionPrefab, transform.position, transform.rotation);
-        ExposiveDamage++;
+        ExposiveHit++;
         yield return new WaitForSeconds(0f);
         Destroy(gameObject);
     }

@@ -34,9 +34,10 @@ public class Bullet : MonoBehaviour
                 {
                     EnemySmall.TakeDamage(damage);
                     StartCoroutine(HitRemove());
-                    ScoreManager.instance.AddScore(scorevalue);
-                }
-                else
+                ScoreManager.instance.AddScore(scorevalue);
+                // Checks if the enemy has the tag and deals damage if its the right tag. 
+            }
+            else
                 {
                     StartCoroutine(Deletee());
                 }
@@ -55,6 +56,6 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
-
+    // Enumators to delete bullets if they hit enemies or misses them. 
 
 }

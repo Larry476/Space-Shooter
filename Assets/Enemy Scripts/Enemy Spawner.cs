@@ -3,15 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Enemy Spawner")]
     
-    public Transform SpawnPoints;
+    public Transform SpawnPoint1;
+ 
+
     public GameObject EnemySmallprefab;
     public GameObject Player;
     public int maxenemies = 5;
@@ -35,12 +38,13 @@ public class EnemySpawner : MonoBehaviour
             spawnenemy();
             timer = 0;
             respawninterval = 5;
+     
         }
       
         void spawnenemy()
         {
-            Instantiate(EnemySmallprefab, SpawnPoints.position, SpawnPoints.rotation);
-            minenemies++;
+            Instantiate(EnemySmallprefab,SpawnPoint1.position, SpawnPoint1.rotation);
+         
         }
         
 
